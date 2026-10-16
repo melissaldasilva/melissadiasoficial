@@ -36,6 +36,25 @@
 
       gtag("config", "AW-18516038005");
     </script>
+
+    <!-- Event snippet for Contato conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-18516038005/MO-xCOaIsZ4dEPWikf1E",
+          value: 1.0,
+          currency: "BRL",
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
   </head>
   <body>
     <!-- HEADER -->
@@ -81,7 +100,7 @@
           target="_blank"
           rel="noopener"
           class="btn btn--light"
-          onclick="gtag()"
+          onclick="gtag_report_conversion()"
           >Agendar Avaliação</a
         >
 
@@ -262,7 +281,7 @@
                   target="_blank"
                   rel="noopener"
                   class="btn btn--gold btn--sm"
-                  onclick="gtag()"
+                  onclick="gtag_report_conversion()"
                   >Agendar via Whatsapp</a
                 >
                 <a href="index.html#metodo" class="btn btn--outline btn--sm"
@@ -287,7 +306,7 @@
                   target="_blank"
                   rel="noopener"
                   class="btn btn--gold btn--sm"
-                  onclick="gtag()"
+                  onclick="gtag_report_conversion()"
                   >Agendar via Whatsapp</a
                 >
                 <a href="index.html#resultados" class="btn btn--outline btn--sm"
@@ -338,7 +357,7 @@
                   target="_blank"
                   rel="noopener"
                   class="btn btn--gold btn--sm"
-                  onclick="gtag()"
+                  onclick="gtag_report_conversion()"
                   >Agendar via Whatsapp</a
                 >
                 <a href="index.html#resultados" class="btn btn--outline btn--sm"
@@ -363,7 +382,7 @@
                   target="_blank"
                   rel="noopener"
                   class="btn btn--gold btn--sm"
-                  onclick="gtag()"
+                  onclick="gtag_report_conversion()"
                   >Agendar via Whatsapp</a
                 >
                 <a href="index.html#resultados" class="btn btn--outline btn--sm"
@@ -413,7 +432,7 @@
                   target="_blank"
                   rel="noopener"
                   class="btn btn--gold btn--sm"
-                  onclick="gtag()"
+                  onclick="gtag_report_conversion()"
                   >Agendar via Whatsapp</a
                 >
                 <a href="index.html#resultados" class="btn btn--outline btn--sm"
@@ -573,7 +592,7 @@
           target="_blank"
           rel="noopener"
           class="btn btn--gold"
-          onclick="gtag()"
+          onclick="gtag_report_conversion()"
           >Agendar Minha Avaliação</a
         >
       </div>
@@ -721,7 +740,7 @@
             target="_blank"
             rel="noopener"
             class="btn btn--gold"
-            onclick="gtag()"
+            onclick="gtag_report_conversion()"
             >Quero Saber da Próxima Turma</a
           >
         </div>
@@ -903,7 +922,7 @@
           target="_blank"
           rel="noopener"
           class="btn btn--gold"
-          onclick="gtag()"
+          onclick="gtag_report_conversion()"
           >Agendar Avaliação</a
         >
       </div>
@@ -939,7 +958,7 @@
               target="_blank"
               rel="noopener"
               class="btn btn--gold"
-              onclick="gtag()"
+              onclick="gtag_report_conversion()"
               >Solicitar proposta personalizada</a
             >
           </div>
@@ -1160,7 +1179,7 @@
               target="_blank"
               rel="noopener"
               class="btn btn--gold"
-              onclick="gtag()"
+              onclick="gtag_report_conversion()"
               >Solicitar uma proposta</a
             ><a href="mailto:melissaldasilva@gmail.com"
               >melissaldasilva@gmail.com</a
